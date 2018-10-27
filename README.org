@@ -1,3 +1,22 @@
 #+TITLE: stumpwm-konfiguracja
 
-Moja konfiguracja StumpWM
+moja konfiguracja stumpwmp.
+
+* instalacja
+- przenieść obecne konfiguracje do plików =<nazwa>_old= (git wymaga aby katalog do którego klonujemy repozytorium był pusty)
+#+BEGIN_EXAMPLE shell
+if [ -f ~/.stumpwmrc ]; then mv ~/.stumpwmrc ~/.stumpwmrc_old; fi
+if [ -d ~/.stumpwm.d ]; then mv ~/.stumpwm.d ~/.stumpwm.d_old; fi
+#+END_EXAMPLE
+- stworzyć nowy katalog domowy stumpwm'a i sklonować do niego repozytorium
+#+BEGIN_EXAMPLE shell
+mkdir ~/.stumpwm.d
+cd ~/.stumpwm.d
+git clone https://github.com/rsm-lisper/stumpwm-konfiguracja .
+#+END_EXAMPLE
+- pobrać też dodatki
+#+BEGIN_EXAMPLE shell
+cd contrib
+git clone https://github.com/stumpwm/stumpwm-contrib .
+#+END_EXAMPLE
+- przejżeć i ew. ustawić niezbędne dane w pliku =init.el=
