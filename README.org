@@ -2,7 +2,8 @@
 
 moja konfiguracja stumpwmp.
 
-[[http://lisper.pl/gfx/lisplogo_warning_128.png]]
+#+CAPTION: Caution: Made with secret alien technology
+[[http://lisper.pl/gfx/lisplogo_128.png]]
 
 * instalacja
 - na wszelki wypadek przenieść obecne konfiguracje do plików =<nazwa>_old= (git wymaga aby katalog do którego klonujemy repozytorium był pusty):
