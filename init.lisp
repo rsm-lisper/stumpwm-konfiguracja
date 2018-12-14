@@ -29,6 +29,6 @@
 	    (string #\NewLine)
 	    "%w")) ; window list
 
-(setf *mode-line-timeout* 3)
-(setf *normal-border-width* 5)
+(setf *mode-line-timeout* 5)
+(setf *normal-border-width* 6)
 (set-focus-color 'orange)

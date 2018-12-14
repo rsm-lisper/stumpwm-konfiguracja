@@ -2,21 +2,31 @@
 
 moja konfiguracja stumpwmp.
 
+[[http://lisper.pl/gfx/lisplogo_warning_128.png]]
+
 * instalacja
-- przenieść obecne konfiguracje do plików =<nazwa>_old= (git wymaga aby katalog do którego klonujemy repozytorium był pusty)
+- na wszelki wypadek przenieść obecne konfiguracje do plików =<nazwa>_old= (git wymaga aby katalog do którego klonujemy repozytorium był pusty):
 #+BEGIN_EXAMPLE shell
 if [ -f ~/.stumpwmrc ]; then mv ~/.stumpwmrc ~/.stumpwmrc_old; fi
 if [ -d ~/.stumpwm.d ]; then mv ~/.stumpwm.d ~/.stumpwm.d_old; fi
 #+END_EXAMPLE
-- stworzyć nowy katalog domowy stumpwm'a i sklonować do niego repozytorium
+- stworzyć nowy katalog domowy stumpwm'a i sklonować do niego repozytorium:
 #+BEGIN_EXAMPLE shell
 mkdir ~/.stumpwm.d
 cd ~/.stumpwm.d
 git clone https://github.com/rsm-lisper/stumpwm-konfiguracja .
 #+END_EXAMPLE
-- pobrać też dodatki
+- pobrać też dodatki (są jako submoduł):
 #+BEGIN_EXAMPLE shell
-cd contrib
-git clone https://github.com/stumpwm/stumpwm-contrib .
+git submodule init
+git submodule update
 #+END_EXAMPLE
-- przejżeć i ew. ustawić niezbędne dane w pliku =init.el=
+- przejżeć i ew. dostosować rzeczy w pliku =init.el=.
+- =xinitrc= w zasadzie uruchamia (i konfiguruje) serwer X, podlinkować go do katalogu domowego:
+#+BEGIN_EXAMPLE
+ln -s xinitrc ~/.xinitrc
+#+END_EXAMPLE
+- na koniec żeby na głównym branch'u nic nie robić, zmiana na local:
+#+BEGIN_EXAMPLE
+git checkout -b local
+#+END_EXAMPLE
