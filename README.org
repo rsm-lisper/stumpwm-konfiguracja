@@ -30,3 +30,8 @@ ln -s xinitrc ~/.xinitrc
 #+BEGIN_EXAMPLE
 git checkout -b local
 #+END_EXAMPLE
+
+* materiały w sieci
+- http://www.xsteve.at/prg/stumpwm/ - ciekawy przykład konfiguracji.
+- https://stumpwm.github.io/1.0.0/stumpwm-1.0.0.html - stumpwm manual.
+- https://github.com/stumpwm/stumpwm/wiki - stumpwm community wiki.
